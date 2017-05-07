@@ -22,7 +22,7 @@ public class PingServicesImpl {
 			connection.connect();
 
 			int code = connection.getResponseCode();
-			
+			System.out.println("Result is "+code);
 			LOGGER.debug("#### Inside into the url: [="+url+"], status Code=["+code+"]");
 	
 			if(code!=200){
@@ -32,13 +32,25 @@ public class PingServicesImpl {
 				 }
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			result = "->Red<-";
 			LOGGER.info("#### Error into the getStatus()  ######"+e.getMessage());
 		}
 		
+		
 		LOGGER.info("#### Exit into the getStatus() Code method is stared ######");
 		return result;
 	}
+	
+	
 
+	public static void main(String[] args) {
+		try {
+			System.out.println(getStatus("https://www.google1.com"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 }

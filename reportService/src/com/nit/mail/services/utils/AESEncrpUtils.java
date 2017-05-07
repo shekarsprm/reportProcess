@@ -40,12 +40,4 @@ public static String encrypt(String Data) throws Exception {
 }
 	
 
-    public static void main(String[] args) {
-		try {
-			System.out.println(encrypt("sriramsri"));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }

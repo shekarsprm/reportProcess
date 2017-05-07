@@ -37,10 +37,9 @@ public static Logger LOGGER=Logger.getLogger(EmailUtils.class);
 			properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 			properties.put("mail.user", MailServicesConstants.FROM_EMAIL_ID);
 			properties.put("mail.password", MailServicesConstants.FROM_PWD);
-
-			System.out.println(properties);
 			System.out.println(AESEncrpUtils.decrypt(MailServicesConstants.FROM_PWD));
 			// creates a new session with an authenticator
+
 			Authenticator auth = new Authenticator() {
 				public PasswordAuthentication getPasswordAuthentication() {
 					try {
