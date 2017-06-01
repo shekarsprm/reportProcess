@@ -1,0 +1,15 @@
+
+APP_CODES_TBL
+
+create table APP_CODES_TBL(
+
+Code_id int autoIncrement 
+code PK 240 (UNIQUE)
+status 1
+creating_Date date
+expire_date date (From Today to 180 Days Allowed)
+product_id int  (Ex: 1)
+Camp_id int (Ex:1)
+Created_By String (Ex:Shekar)
+
+)
